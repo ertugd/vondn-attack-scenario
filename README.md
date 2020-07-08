@@ -1,4 +1,4 @@
-![Screenshot from 2020-07-07 15-21-14](https://user-images.githubusercontent.com/16559483/86958305-dba9b500-c153-11ea-9b72-20534093a57f.png)
+![] (images/image1.png)
 
 Prerequisites
 =============
