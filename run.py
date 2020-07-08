@@ -23,7 +23,7 @@ import argparse
 #Copyright (c) 2019, Algorithmi Research Centree, University of Minho, Portugal
 
 
-# * Authors: Ertugrul Dogruluk, Antonio Costa. <d7474@di.uminho.pt>, Department of #Informatics
+# * Authors: Ertugrul Dogruluk <d7474@di.uminho.pt>, Department of #Informatics
 
 ######################################################################
 ######################################################################
@@ -151,7 +151,7 @@ class SideChannelAttack (Processor):
             for topology in self.topology:
                 for evil in self.evils:
                     for run in self.runs:
-                        cmdline = ["./build/vondn", #here has to change for different scenarios "vondn or project"!!!!!!!
+                        cmdline = ["./build/vondn", #here is reading build form for vondn.cpp complied project
                                    #"./waf --run=tesbed --vis",
                                    "--algorithm=%s" % algorithm,
                                    "--run=%d" % run,
