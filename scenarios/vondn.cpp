@@ -97,12 +97,12 @@ int normalNetworkConfiguration(string prefix, NodeContainer nodes) {
 		helper.SetOldContentStore("ns3::ndn::cs::Privacy::Lru","MaxSize", "100", "CacheProbability", "1.0", "UpdateInterval", "3500", "CHRatioTreshold", "0.001");
 		helper.Install(nodes);
 		StrategyChoiceHelper::Install(nodes, "/vondn",
-				"/localhost/nfd/strategy/best-route"); // nfd forwarding strategy
+				"/localhost/nfd/strategy/best-route"); // nfd:DaD best-route forwarding strategy
 	} else if (prefix == "dad2") {
 		helper.SetOldContentStore("ns3::ndn::cs::Privacy::Lru","MaxSize", "100", "CacheProbability", "1.0", "UpdateInterval", "3500", "CHRatioTreshold", "0.01");
 		helper.Install(nodes);
 		StrategyChoiceHelper::Install(nodes, "/vondn",
-				"/localhost/nfd/strategy/multicast"); // nfd forwarding strategy
+				"/localhost/nfd/strategy/multicast"); // nfd:DaD multicast forwarding strategy
 	} else if (prefix == "nocache") {
 		helper.SetOldContentStore("ns3::ndn::cs::Nocache");
 		helper.Install(nodes);
