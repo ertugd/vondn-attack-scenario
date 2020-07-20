@@ -60,19 +60,20 @@ Running
 
 Normally, you can run scenarios either directly
 
-    ./build/<scenario_name>
+    ./build/vondn
 
 or using waf
 
-    ./waf --run <scenario_name>
+    ./waf --run vondn
+    ./run.py -s attack-vondn
 
 If NS-3 is installed in a non-standard location, on some platforms (e.g., Linux) you need to specify ``LD_LIBRARY_PATH`` variable:
 
-    LD_LIBRARY_PATH=/usr/local/lib ./build/<scenario_name>
+    LD_LIBRARY_PATH=/usr/local/lib ./build/vondn
 
 or
 
-    LD_LIBRARY_PATH=/usr/local/lib ./waf --run <scenario_name>
+    LD_LIBRARY_PATH=/usr/local/lib ./waf --run vondn
 
 To run scenario using debugger, use the following command:
 
@@ -91,24 +92,24 @@ After these command, you will have complete environment to run the vizualizer.
 
 The following will run scenario with visualizer:
 
-    ./waf --run <scenario_name> --vis
+    ./waf --run vondn --vis //this may only work with very specific configurations on vondn.cpp
 
 or
 
-    PKG_LIBRARY_PATH=/usr/local/lib ./waf --run <scenario_name> --vis
+    PKG_LIBRARY_PATH=/usr/local/lib ./waf --run vondn --vis
 
 If you want to request automatic node placement, set up additional environment variable:
 
-    NS_VIS_ASSIGN=1 ./waf --run <scenario_name> --vis
+    NS_VIS_ASSIGN=1 ./waf --run vondn --vis
 
 or
 
-    PKG_LIBRARY_PATH=/usr/local/lib NS_VIS_ASSIGN=1 ./waf --run <scenario_name> --vis
+    PKG_LIBRARY_PATH=/usr/local/lib NS_VIS_ASSIGN=1 ./waf --run vondn --vis
 
 Available simulations
 =====================
-
-<Scenario Name>
+    ./run.py -s attack-vondn //does complite 10 runs for each CS configuration
+    ./run.py -p rations-vondn // only computes graphs from the generated /results file
 ---------------
 
 Description
