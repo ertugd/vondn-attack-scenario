@@ -1,3 +1,6 @@
+//this file is for brute-force configurations. 
+
+
 #include "BadGuy.h"
 #include "ns3/ptr.h"
 #include "ns3/log.h"
